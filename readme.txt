@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Cleanup Images ===
 Contributors: delwinv
 Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvriend.com&cmd=_xclick&currency_code=EUR&amount=1&item_name=Donation%20for%20Cleanup%20Images%20WordPress%20Plugin
 Tags: image, media, library, clean, delete
