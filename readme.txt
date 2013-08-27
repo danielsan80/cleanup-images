@@ -76,10 +76,10 @@ writable by the web server/PHP. See your hosting ISP for more information.
 
 
 == Screenshots ==
-1. `Screenshot-InitialScreen.png` shows the cleanup screen before a search for images is performed
-2. `Screenshot-ImagePreview.png` shows the image preview feature available once a search is performed
-3. `Screenshot-Selected.png` shows the one image not used having been checked using the "Select all..." checkbox
-4. `Screenshot-Deleted.png` shows the one selected image having been deleted and no longer showing in the list
+1. `/assets/Screenshot-InitialScreen.png` shows the cleanup screen before a search for images is performed
+2. `/assets/Screenshot-ImagePreview.png` shows the image preview feature available once a search is performed
+3. `/assets/Screenshot-Selected.png` shows the one image not used having been checked using the "Select all..." checkbox
+4. `/assets/Screenshot-Deleted.png` shows the one selected image having been deleted and no longer showing in the list
 
 == Changelog ==
 = 1.0 =
