@@ -1,6 +1,6 @@
 === Cleanup Images ===
 Contributors: delwinv
-Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvriend.com&cmd=_xclick&currency_code=EUR&amount=1&item_name=Donation%20for%20Cleanup%20Images%20WordPress%20Plugin
+Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvriend.com&cmd=_xclick&currency_code=EUR&item_name=Donation%20for%20Cleanup%20Images%20WordPress%20Plugin
 Tags: image, media, library, clean, delete
 Requires at least: 3.0.1
 Tested up to: 3.4
