@@ -76,14 +76,15 @@ writable by the web server/PHP. See your hosting ISP for more information.
 
 
 == Screenshots ==
-1. `/assets/Screenshot-InitialScreen.png` shows the cleanup screen before a search for images is performed
-2. `/assets/Screenshot-ImagePreview.png` shows the image preview feature available once a search is performed
-3. `/assets/Screenshot-Selected.png` shows the one image not used having been checked using the "Select all..." checkbox
-4. `/assets/Screenshot-Deleted.png` shows the one selected image having been deleted and no longer showing in the list
+1. Shows the cleanup screen before a search for images is performed
+2. Shows the image preview feature available once a search is performed
+3. Shows the one image not used having been checked using the "Select all..." checkbox
+4. Shows the one selected image having been deleted and no longer showing in the list
 
 == Changelog ==
+
 = 1.0 =
-* First public release - no change from 0.11
+* First public release - no change from 0.11 other than the readme file and site banner image
 
 = 0.11 =
 * Fixed pagination issue when deleting all images from the last page
@@ -92,8 +93,9 @@ writable by the web server/PHP. See your hosting ISP for more information.
 * Initial version, used on production sites programmed by Delwin Vriend
 
 == Upgrade Notice ==
+
 = 1.0 =
-* First public release - no change from 0.11
+* First public release - no change from 0.11 other than the readme file and site banner image
 
 = 0.1 =
 * Upgrade if you have an issue with the pagination when deleting all images from the last page. This can also be
