@@ -3,8 +3,8 @@ Contributors: delwinv
 Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvriend.com&cmd=_xclick&currency_code=EUR&item_name=Donation%20for%20Cleanup%20Images%20WordPress%20Plugin
 Tags: image, media, library, clean, delete
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 1.0
+Tested up to: 3.6.1
+Stable tag: 1.01
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,9 @@ writable by the web server/PHP. See your hosting ISP for more information.
 
 == Changelog ==
 
+= 1.01 =
+* Updated compatibility to WordPress 3.6.1
+
 = 1.0 =
 * First public release - no change from 0.11 other than the readme file and site banner image
 
@@ -93,6 +96,9 @@ writable by the web server/PHP. See your hosting ISP for more information.
 * Initial version, used on production sites programmed by Delwin Vriend
 
 == Upgrade Notice ==
+
+= 1.01 =
+* Updated compatibility to WordPress 3.6.1. No need to upgrade
 
 = 1.0 =
 * First public release - no change from 0.11 other than the readme file and site banner image
