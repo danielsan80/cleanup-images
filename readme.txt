@@ -103,7 +103,7 @@ writable by the web server/PHP. See your hosting ISP for more information.
 = 1.0 =
 * First public release - no change from 0.11 other than the readme file and site banner image
 
-= 0.1 =
+= 0.11 =
 * Upgrade if you have an issue with the pagination when deleting all images from the last page. This can also be
 corrected by simply re-running the query for unused images.
 
