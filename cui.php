@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Clean Up Images
-Version: 0.11
+Version: 1.02
 Plugin URI: http://www.delwinvriend.com/clean-up-images/
 Author: Delwin Vriend
 Author URI: http://www.delwinvriend.com/
