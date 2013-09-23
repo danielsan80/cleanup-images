@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvrien
 Tags: image, media, library, clean, delete
 Requires at least: 3.0.1
 Tested up to: 3.6.1
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,7 +83,7 @@ writable by the web server/PHP. See your hosting ISP for more information.
 
 == Changelog ==
 
-= 1.01 =
+= 1.02 =
 * Updated compatibility to WordPress 3.6.1
 
 = 1.0 =
@@ -97,7 +97,7 @@ writable by the web server/PHP. See your hosting ISP for more information.
 
 == Upgrade Notice ==
 
-= 1.01 =
+= 1.02 =
 * Updated compatibility to WordPress 3.6.1. No need to upgrade
 
 = 1.0 =
