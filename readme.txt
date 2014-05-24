@@ -3,8 +3,8 @@ Contributors: delwinv
 Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvriend.com&cmd=_xclick&currency_code=EUR&item_name=Donation%20for%20Cleanup%20Images%20WordPress%20Plugin
 Tags: image, media, library, clean, delete
 Requires at least: 3.0.1
-Tested up to: 3.6.1
-Stable tag: 1.02
+Tested up to: 3.9
+Stable tag: 1.03
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,9 @@ writable by the web server/PHP. See your hosting ISP for more information.
 4. Shows the one selected image having been deleted and no longer showing in the list
 
 == Changelog ==
+
+= 1.03 =
+* Updated compatibility to WordPress 3.9
 
 = 1.02 =
 * Updated compatibility to WordPress 3.6.1
