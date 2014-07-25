@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Clean Up Images
-Version: 1.03
+Version: 1.04
 Plugin URI: http://www.delwinvriend.com/clean-up-images/
 Author: Delwin Vriend
 Author URI: http://www.delwinvriend.com/
@@ -97,7 +97,8 @@ function CUI_allImage($i, $max=25) {
 	$res = CUI_getImages($i, $max, $_SESSION['CUI']['order']);
 	$used = 0;
 	$notused = 0;
-	$content_dir = array_pop(explode("/", WP_CONTENT_DIR));
+	$dir_array = explode("/", WP_CONTENT_DIR);
+	$content_dir = array_pop($dir_array);
 	$upload_dir = wp_upload_dir();
 	$upload_dir = $upload_dir['baseurl'];
 	$upload_dir = preg_replace('/.*?\/'.$content_dir.'(.*)$/', $content_dir . '$1', $upload_dir);
@@ -177,7 +178,8 @@ function CUI_delete() {
 						//take the root of the file in the server
 						$file = $image_details[3];
 						//take only the name
-						$name = array_pop(explode('/', $file));
+						$file_arr = explode('/', $file);
+						$name = array_pop($file_arr);
 						//unset for example Large from the vector
 						unset($new_db_value["sizes"][$type]);
 						// try to update the database
@@ -187,9 +189,9 @@ function CUI_delete() {
 							$path = implode("/", $path);
 							$rel_file =  str_replace($path, "", $file);
 							// try to delete the file
-							if (@unlink($file)) { ?>
+							if (file_exists(realpath($file)) && @unlink(realpath($file))) { ?>
 								<tr><th class="status deleted" width="20"><?= __("Deleted:", get_text_domain()) ?></th><td class="name" width="20"><?= $name ?></td><td class="file" width="*"><?= $rel_file ?></td></tr>
-<?php					} else if (file_exists($file)) {
+<?php					} else if (file_exists(realpath($file))) {
 								// if can't delete the file, restore the old information to the database
 								CUI_updateImages(serialize($original_db_value), $image_details[2]); ?>
 								<tr><th class="status permission" width="20"><?= __("Cannot delete:", get_text_domain()) ?></th><td class="name" width="20"><?= $name ?></td><td class="file" width="*"><?= $rel_file ?><p class="permission"><?= __('Please change directory premissions to <span class="permission">777</span>', get_text_domain()) ?></p></td></tr>
@@ -205,7 +207,7 @@ function CUI_delete() {
 									if ($parent_deleted) break;
 								}
 								if (!$parent_deleted) { ?>
-									<tr><th class="status doesnotexist" width="20"><?= __("File does not exist:", get_text_domain()) ?></th><td class="name" width="20"><?= $name ?></td><td class="file" width="*"><?= $rel_file ?><p class="doesnotexist"><?= __("The database has been updated to reflect this fact.", get_text_domain()) ?></p></td></tr>
+									<tr><th class="status doesnotexist" width="20"><?= __("File does not exist:", get_text_domain()) ?></th><td class="name" width="20"><?= $name ?></td><td class="file" width="*"><?= realpath($file) ?><p class="doesnotexist"><?= __("The database has been updated to reflect this fact.", get_text_domain()) ?></p></td></tr>
 <?php						} else { ?>
 									<tr><th class="status deleted" width="20"><?= __("Deleted with parent:", get_text_domain()) ?></th><td class="name" width="20"><?= $name ?></td><td class="file" width="*"><?= $rel_file ?></td></tr>
 <?php						}
@@ -213,7 +215,8 @@ function CUI_delete() {
 						}
 					} else {
 						$file = $image_details[2];
-						$name = array_pop(explode('/', $file));
+						$file_arr = explode('/', $file);
+						$name = array_pop($file_arr);
 						wp_delete_attachment($id); ?>
 						<tr><th class="status deleted" width="20"><?= __("Deleted:", get_text_domain()) ?></th><td class="name" colspan="2" width="*"><?= $name ?> <i><?= __("(including any of its child/thumbnail images)", get_text_domain()) ?></i></td></tr>
 <?php			}

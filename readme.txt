@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?business=donation@delwinvrien
 Tags: image, media, library, clean, delete
 Requires at least: 3.0.1
 Tested up to: 3.9
-Stable tag: 1.03
+Stable tag: 1.04
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,10 @@ writable by the web server/PHP. See your hosting ISP for more information.
 4. Shows the one selected image having been deleted and no longer showing in the list
 
 == Changelog ==
+
+= 1.04 =
+* PHP Strict Standards compliance change in usage of array_pop() function. Thank-you overclokk.
+* Changed deletion code to report attempted file deletion path if a file was not found to try to debug some file deletion issues.
 
 = 1.03 =
 * Updated compatibility to WordPress 3.9
