@@ -111,6 +111,7 @@ function CUI_allImage($i, $max=25) {
 			$id = $unser['id'];
 			//get the original image
 			$name = $seri['file'];
+                        $pi = pathinfo($name);
 			//save the original vector of meta_value, for use after in delete_image
 			$original[$id] = $seri;
 			$files[$id]['parent'][] = $name;
@@ -123,6 +124,7 @@ function CUI_allImage($i, $max=25) {
 				$files[$id]['parent']['used'] = false;
 				$notused++;
 			}
+                        $files[$id]['parent']['dirname'] = $pi['dirname'];
 			$parent_image_count++;
 			//if the original file have some copy of the different sizes
 			if (!empty($seri['sizes'])) {
@@ -299,6 +301,7 @@ function CUI_logic() {
 					$parent_image_count++;
 					$parent = explode("/", $file["parent"][0]);
 					$name = array_pop($parent);
+                                        $dirname = $file['parent']['dirname'];
 					$folder = implode("/", $parent);
 					$html.= '<input type="checkbox" class="parent select" ';
 					if ($file["parent"]['used']) {
@@ -317,7 +320,7 @@ function CUI_logic() {
 								$delAll = false;
 								$html2.= 'disabled="disabled" ';
 							}
-							$html2.= 'name="im[]" id="child_'.$key.'_'.$count.'" value="' . "$keyu:::$key:::$meta_id:::$newdir/$child[0]" . '" /> <label for="child_' . $key . '_' . $count . '" data-url="' . $urldir . "/$folder/$child[0]" . '">' . $folder . "/" . $child[0] . '</label></li>';
+							$html2.= 'name="im[]" id="child_'.$key.'_'.$count.'" value="' . "$keyu:::$key:::$meta_id:::$newdir/$dirname/$child[0]" . '" /> <label for="child_' . $key . '_' . $count . '" data-url="' . $urldir . "/$folder/$child[0]" . '">' . $folder . "/" . $child[0] . '</label></li>';
 						}
 						$html2.= '</ul>';
 					}
